@@ -14,7 +14,7 @@ import java.io.Serializable;
  * Created by root on 13/03/16.
  */
 
-public class SparkServiceimpl  implements BaseService{
+public class SparkServiceimpl  implements Basefunction{
 
     private static JavaSparkContext jc ;
     @Override

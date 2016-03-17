@@ -20,10 +20,22 @@ public class EntryPoint {
     @GET
     @Path("query")
     @Produces(MediaType.TEXT_PLAIN)
-    public String query() {
+    public String queryspark() {
         String [] samp  = {"test" ,"over" } ;
-        BaseService s = new SparkServiceimpl();
+        Basefunction s = new SparkServiceimpl();
         String testname = s.query("input.txt");
+
+        return  testname;
+    }
+
+//Hbase
+    @GET
+    @Path("queryhbase")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String queryhbase() {
+
+        Basefunction s = new Hbaseimpl();
+        String testname = s.query("my-table");
 
         return  testname;
     }
